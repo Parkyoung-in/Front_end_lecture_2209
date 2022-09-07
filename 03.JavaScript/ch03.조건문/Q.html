@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function year() {
+            const num = Number(document.getElementById('num').value);  //.value : input에서 가져온 값
+            const res = document.getElementById('result');
+            if (num % 400 === 0) {
+                res.innerHTML = '<h4>윤년입니다.</h4>';
+            }      
+            else if (num % 100 === 0) {
+                res.innerHTML = '<h4>평년입니다.</h4>';
+            }
+            else if (num % 4 === 0) {
+                res.innerHTML = '<h4>윤년입니다.</h4>';
+            }
+            else {
+                res.innerHTML = '<h4>평년입니다.</h4>';
+            }          
+        }
+        function score() {
+            const score = Number(document.getElementById('score').value);  //.value : input에서 가져온 값
+            const res = document.getElementById('result2');
+            switch (parseInt(score/10)) {
+                case 10: 
+                    res.innerHTML = '<h4>A학점입니다.</h4>';
+                    break;
+                case 9: 
+                    res.innerHTML = '<h4>A학점입니다.</h4>';
+                    break;
+                case 8: 
+                    res.innerHTML = '<h4>B학점입니다.</h4>';
+                    break;
+                case 7: 
+                    res.innerHTML = '<h4>C학점입니다.</h4>';
+                    break;
+                case 6: 
+                    res.innerHTML = '<h4>D학점입니다.</h4>';
+                    break;
+                default:
+                    res.innerHTML = '<h4>F학점입니다.</h4>';
+                    break;    
+            }
+        }
+    </script>
+</head>
+
+<body style = "margin: 50px;">
+    <input type="text" id="num" placeholder="년도를 입력하세요."">
+    <button onclick="year()">확인</button>
+    <br>
+    <p id="result"></p>
+    <br><br><br><br>
+    <input type="text" id="score" placeholder="점수를 입력하세요."">
+    <button onclick="score()">확인</button>
+    <br>
+    <p id="result2"></p>
+</body>
+</html>
