@@ -1,5 +1,5 @@
 // 1에서 10사이의 정수를 임의로 생성
-let num = Math.ceil(Math.random() * 10); // Math.random() 0 ~ 1 사이의 값을 랜덤으로 반환
+let num = Math.ceil(Math.random() * 10); // Math.random() 1~ 10 사이의 값을 랜덤으로 반환
 
 if (num % 2 === 0) {
     console.log(`${num}은/는 짝수입니다.`);
