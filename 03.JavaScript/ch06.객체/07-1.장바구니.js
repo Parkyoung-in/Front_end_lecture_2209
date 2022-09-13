@@ -30,15 +30,15 @@ class Cart {
     }
     sum() {
         let totalPrice = 0;
-        for (let cart of this.cart) {
-            totalPrice += cart.quantity * cart.product.price;
+        for (let item of this.cart) {
+            totalPrice += item.quantity * item.product.price;
         }
         return totalPrice;
     }
     toString() {
         let result = '';
-        for (let cart of this.cart) {
-            result += cart.product.toString() + `,\t수량: ${cart.quantity}\n`;
+        for (let item of this.cart) {
+            result += item.product.toString() + `,\t수량: ${item.quantity}\n`;
         }
         result += `합계: ${this.sum()}`;
         return result;
