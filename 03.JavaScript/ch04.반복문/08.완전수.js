@@ -1,6 +1,7 @@
 // Perfect number
 // 10000 이하의 완전수를 구하세요
 
+// 찾으려고 하는 모든 수에 대해서
 for (let i=2; i<=10000; i++) {
     // 약수 찾기
     let divisors = [];

@@ -61,22 +61,4 @@ console.log(numbers);  // [ 97, 82, 67, 45, 35 ]
 const abFruits = fruits.splice(0, 2);
 console.log(abFruits, fruits);          // [ 'apple', 'banana' ] [ 'cherry', 'grape' ]
 
-// 배열의 각 요소에 대해서 함수 적용
-let result = numbers.map(function(num) {
-    return Math.sqrt(num);
-});
-console.log(result);
-result = numbers.map(x => Math.sqrt(x));
-console.log(result);
 
-// 앞으로 해결해야 할 과제 -- Callback 함수, method chaining 적용
-const objArray = [
-    {name:'제임스', score:80, math:80, sci:70},
-    {name:'마리아', score:90, math:90, sci:70},
-    {name:'아담', score:70, math:80, sci:60},
-    {name:'이브', score:65, math:70, sci:80}
-]
-// 성적(score)의 내림차순으로 정렬을 해보세요.
-// math와 sci의 평균을 구하세요.
-// math 점수가 80점 이상인 사람
-console.log(objArray[1]);
